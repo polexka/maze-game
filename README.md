@@ -1,97 +1,175 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Maze Game / Игра Maze
 
-# Getting Started
+[English](#english) | [Русский](#russian)
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+<a name="english"></a>
+## English
 
-## Step 1: Start Metro
+Maze is a maze game developed with React Native.
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+### Description
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+Maze is a game where the player must navigate through a maze from start to finish while avoiding obstacles. The game features:
+- Various maze patterns
+- Move counter system
+- Leaderboard
+- Score saving
 
-```sh
-# Using npm
-npm start
+### Screenshots
 
-# OR using Yarn
-yarn start
+<table>
+  <tr>
+    <td align="center">
+      <img src="screenshots/game.jpeg" alt="Gameplay" width="200"/><br />
+      <em>Gameplay</em>
+    </td>
+    <td align="center">
+      <img src="screenshots/win.jpeg" alt="Win Screen" width="200"/><br />
+      <em>Win Screen</em>
+    </td>
+    <td align="center">
+      <img src="screenshots/leaderboard.jpeg" alt="Leaderboard" width="200"/><br />
+      <em>Leaderboard</em>
+    </td>
+  </tr>
+</table>
+
+### Installation
+
+1. Make sure you have [Node.js](https://nodejs.org/) installed.
+2. Clone the repository:
+   ```bash
+   git clone https://github.com/polexka/maze-game.git
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+   
+4. **Build and Install**:
+   - For iOS: You can install the app using the `.app` file located in the `release` folder.
+   - For Android: You can install the app using the `.apk` file also located in the `release` folder.
+5. Run the project:
+   ```bash
+   npx react-native start
+   ```
+
+### How to Play
+
+1. Use control buttons to move the character
+2. Reach the goal in minimum moves
+3. Enter your name after completing the level to save your score
+4. View the leaderboard
+
+### Technologies
+
+- React Native
+- Expo
+- AsyncStorage for data persistence
+- React Navigation
+
+### Project Structure
+
+```
+src/
+  ├── components/ # React components
+  │ ├── GameCell.tsx # Game cell component
+  │ ├── GameControls.tsx # Control elements
+  │ ├── GameGrid.tsx # Game board
+  │ ├── WinScreen.tsx # Win screen
+  │ └── GameScreen.tsx # Main game screen
+  │ └── LeaderboardScreen.tsx # Leaderboard screen
+  └── utils/ # Utilities
+  ├── gameUtils.ts # Game logic
+  ├── obstaclePatterns.ts # Obstacle patterns
+  └── storageUtils.ts # Storage operations
 ```
 
-## Step 2: Build and run your app
+### License
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+MIT
 
-### Android
+---
 
-```sh
-# Using npm
-npm run android
+<a name="russian"></a>
+## Русский
 
-# OR using Yarn
-yarn android
+Maze - это игра-лабиринт, разработанная на React Native с использованием Expo.
+
+### Описание
+
+Maze - это игра, в которой игрок должен пройти через лабиринт от старта до финиша, избегая препятствий. Игра включает в себя:
+- Различные паттерны лабиринтов
+- Систему подсчета ходов
+- Таблицу рекордов
+- Сохранение результатов
+
+### Скриншоты
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="screenshots/game.jpeg" alt="Игровой процесс" height="200"/><br />
+      <em>Игровой процесс</em>
+    </td>
+    <td align="center">
+      <img src="screenshots/win.jpeg" alt="Экран победы" height="200"/><br />
+      <em>Экран победы</em>
+    </td>
+    <td align="center">
+      <img src="screenshots/leaderboard.jpeg" alt="Таблица рекордов" height="200"/><br />
+      <em>Таблица рекордов</em>
+    </td>
+  </tr>
+</table>
+
+### Установка
+
+1. Убедитесь, что у вас установлен [Node.js](https://nodejs.org/)
+2. Клонируйте репозиторий:
+   ```bash
+   git clone https://github.com/polexka/maze-game.git
+   ```
+3. Установите зависимости:
+   ```bash
+   npm install
+   ```
+4. **Сборка и установка**:
+   - Для iOS: вы можете установить приложение, используя файл `.app`, который находится в папке `release`.
+   - Для Android: вы можете установить приложение, используя файл `.apk`, который также находится в папке `release`.
+5. Запустите проект:
+   ```bash
+   npx react-native start
+   ```
+
+### Как играть
+
+1. Используйте кнопки управления для перемещения персонажа
+2. Доберитесь до цели за минимальное количество ходов
+3. После прохождения уровня введите свое имя для сохранения результата
+4. Просматривайте таблицу рекордов
+
+### Технологии
+
+- React Native
+
+### Структура проекта
+
+```
+src/
+  ├── components/         # React компоненты
+  │   ├── GameCell.tsx    # Ячейка игрового поля
+  │   ├── GameControls.tsx # Элементы управления
+  │   ├── GameGrid.tsx    # Игровое поле
+  │   └── WinScreen.tsx   # Экран победы
+  │   └── GameScreen.tsx  # Основной игровой экран
+  │   └── LeaderboardScreen.tsx  # Основной игровой экран
+  └── utils/             # Утилиты
+      ├── gameUtils.ts   # Игровая логика
+      ├── obstaclePatterns.ts # Паттерны препятствий
+      └── storageUtils.ts # Работа с хранилищем
 ```
 
-### iOS
+### Лицензия
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
-
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+MIT 

@@ -73,3 +73,34 @@ yarn-error.log
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+# macOS
+.DS_Store
+
+# node
+node_modules/
+
+# logs
+*.log
+
+# bundler output
+/dist
+/build
+
+# Xcode
+ios/Pods/
+ios/build/
+
+# Android
+android/.gradle/
+android/app/build/
+
+# React Native cache
+.expo/
+.expo-shared/
+*.expo
+*.swp
+*.keystore
+*.iml
+*.idea
+.env
