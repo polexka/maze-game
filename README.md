@@ -64,7 +64,6 @@ Maze is a game where the player must navigate through a maze from start to finis
 ### Technologies
 
 - React Native
-- Expo
 - AsyncStorage for data persistence
 - React Navigation
 
@@ -94,7 +93,7 @@ MIT
 <a name="russian"></a>
 ## Русский
 
-Maze - это игра-лабиринт, разработанная на React Native с использованием Expo.
+Maze - это игра-лабиринт, разработанная на React Native.
 
 ### Описание
 
